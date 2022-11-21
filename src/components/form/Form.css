@@ -1,0 +1,44 @@
+.form-container {
+  box-sizing: border-box;
+  padding: 14px;
+}
+
+.form-group { height: 80px}
+
+.form-title {
+  font-size: 1.777em;
+  text-align: center;
+  margin-bottom: 14px;
+  color: #28B3AC;
+}
+
+.form-label
+{  display: block; }
+
+.form-submit {
+  text-align: center;
+  width: 100%;
+  border-radius: 14px;
+  padding: 4px 7px;
+  border: none;
+  background: #555;
+  color: #fff;
+  margin-bottom: 14px
+}
+
+
+.form-link
+{  margin-bottom: 14px;
+  text-align: center;
+  font-weight: 700 !important;
+  font-family: sans-serif;
+  text-decoration: none;
+  display: block;}
+
+.form-link:nth-of-type(1) {
+  margin-top: 14px;
+}
+
+.form-group .MuiFormControl-root {
+  width: 100%;
+}

@@ -1,0 +1,21 @@
+table.payment-details {
+  width: 100%;
+  font: var(--primary_fnt)
+  
+}
+
+.payment-details tr td {
+  border-bottom: 2px dashed #937c4c;
+}
+
+.payment-details tr:last-child td {
+  border-bottom: none;
+}
+
+tr td:nth-of-type(2) {
+  text-align: right;
+}
+
+td {
+  padding: 7px 7px
+ }

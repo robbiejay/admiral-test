@@ -1,0 +1,11 @@
+.page-wrapper {
+  box-sizing: border-box;
+	padding: 24px;
+  min-height: 100vh;
+}
+
+@media only screen and (max-width: 1200px) {
+  .page-wrapper {
+    padding: 24px 6px;
+  }
+}

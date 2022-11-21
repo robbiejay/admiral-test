@@ -1,0 +1,32 @@
+.column {
+  display: inline-block;
+  float: left;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-4 {
+  width: 33.333%;
+}
+
+@media only screen and (max-width: 768px) {
+  .col-6:not(.mobile-col) {
+    width: 100%;
+    margin-bottom: 7px;
+  }
+  .col-4:not(.mobile-col) {
+    width: 100%;
+    margin-bottom: 7px;
+  }
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-flx-vertcent {
+  display: flex;
+  align-items: center;
+}
