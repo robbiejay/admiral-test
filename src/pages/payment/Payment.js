@@ -99,6 +99,7 @@ function getPayment() {
                 paymentTotal={price}
               />
               <div style={{"padding": "21px"}}>
+              <Link to="/3f0TEST309"><Button variant={'outlined'} className='payment-btn'>Pay Now</Button></Link>
               </div>
             </div>
           </div>
