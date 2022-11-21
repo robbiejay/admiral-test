@@ -13,6 +13,8 @@ import { checkPaymentLink } from '../../api';
 import Image from '../../components/image/Image';
 import logo from '../../assets/admiral-logo.jpg'
 import modalContext from "../../context/ModalContext";
+import { useHistory, Link} from "react-router-dom";
+
 
 export const Payment = ({location}) => {
 
@@ -25,6 +27,7 @@ export const Payment = ({location}) => {
   const [returnedTeacher, setReturnedTeacher] = useState(null)
   const [paymentModalOpen, setPaymentModalOpen] = useState(false);
   const [price, setPrice] = useState(null);
+  const history = useHistory();
 
   const CURRENCY = 'GBP'
 
@@ -70,11 +73,20 @@ function getPayment() {
     setPaymentModalOpen(false);
   }
 
+  const goToPayment = () => {
+      history.push(`/3f0TEST309`);
+  }
+
 
   return (
     <>
     <Page>
       <Wrapper>
+        { !invoice &&
+          <div style={{'display': 'flex', 'flexDirection': 'column', 'justifyContent': 'center', 'height': '100vh'}}>
+            <Button onClick={goToPayment} className='payment-btn' variant={'outlined'}>Go To Payment</Button>
+          </div>
+        }
         { invoice && !invoiceAlreadyPaid && !paymentSuccessful && !wrongInvoice &&
           <>
           <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
@@ -87,7 +99,6 @@ function getPayment() {
                 paymentTotal={price}
               />
               <div style={{"padding": "21px"}}>
-              <Button onClick={() => setPaymentModalOpen(true)} variant={'outlined'} className='payment-btn'>Pay Now</Button>
               </div>
             </div>
           </div>
